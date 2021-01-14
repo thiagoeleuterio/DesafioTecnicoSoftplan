@@ -59,7 +59,7 @@ namespace Calculo.Api.Api.Controllers
         [ProducesResponseType(typeof(ResultMessageResponse<string>), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> ShowMeTheCode()
         {
-            return Ok(new ResultMessageResponse<string>("https://github.com/ArturRibeiro/SoftplanCalcTest"));
+            return Ok(new ResultMessageResponse<string>("https://github.com/thiagoeleuterio/DesafioTecnicoSoftplan"));
         }
     }
 }
