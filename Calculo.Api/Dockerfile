@@ -8,16 +8,16 @@ EXPOSE 443
 
 FROM microsoft/dotnet:2.2-sdk-nanoserver-1803 AS build
 WORKDIR /src
-COPY ["SoftPlan.Calc.Services.Api/SoftPlan.Calc.Services.Api.csproj", "SoftPlan.Calc.Services.Api/"]
-RUN dotnet restore "SoftPlan.Calc.Services.Api/SoftPlan.Calc.Services.Api.csproj"
+COPY ["Calculo.Api/Calculo.Api.csproj", "Calculo.Api/"]
+RUN dotnet restore "Calculo.Api/Calculo.Api.csproj"
 COPY . .
-WORKDIR "/src/SoftPlan.Calc.Services.Api"
-RUN dotnet build "SoftPlan.Calc.Services.Api.csproj" -c Release -o /app
+WORKDIR "/src/Calculo.Api"
+RUN dotnet build "Calculo.Api.csproj" -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish "SoftPlan.Calc.Services.Api.csproj" -c Release -o /app
+RUN dotnet publish "Calculo.Api.csproj" -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "SoftPlan.Calc.Services.Api.dll"]
+ENTRYPOINT ["dotnet", "Calculo.Api.dll"]
