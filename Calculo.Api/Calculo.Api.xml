@@ -1,0 +1,289 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Calculo.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Calculo.Api.App.CalcularJuros.CalculaJurosCommand">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Calculo.Api.App.CalcularJuros.CalculaJurosCommand.ValorInicial">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Calculo.Api.App.CalcularJuros.CalculaJurosCommand.QuantidadeMeses">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Calculo.Api.App.CalcularJuros.CalculaJurosCommand.TaxaJuros">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Calculo.Api.App.CalcularJuros.CalculaJurosCommand.Factory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.App.CalcularJuros.CalculaJurosCommand.Factory.Create(System.Decimal,System.Int32,System.Decimal)">
+            <summary>
+            
+            </summary>
+            <param name="valorInicial"></param>
+            <param name="quantidadeMeses"></param>
+            <param name="taxaJuros"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Calculo.Api.App.CalcularJuros.CalculaJurosCommandHandlers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.App.CalcularJuros.CalculaJurosCommandHandlers.#ctor(MediatR.IMediator,MediatR.INotificationHandler{Calculo.Api.App.DomainNotification})">
+            <summary>
+            
+            </summary>
+            <param name="mediator"></param>
+            <param name="notificationHandler"></param>
+        </member>
+        <member name="M:Calculo.Api.App.CalcularJuros.CalculaJurosCommandHandlers.Handle(Calculo.Api.App.CalcularJuros.CalculaJurosCommand,System.Threading.CancellationToken)">
+            <summary>
+            Calcula juros compostos
+            </summary>
+            <param name="message"><see cref="T:System.Threading.CancellationToken"/></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Calculo.Api.App.DomainNotification">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Calculo.Api.App.DomainNotification.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Calculo.Api.App.DomainNotification.CommandType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Calculo.Api.App.DomainNotification.Factory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.App.DomainNotification.Factory.Create(System.Object,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="commandType"></param>
+            <param name="description"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Calculo.Api.App.DomainNotificationHandler">
+            <summary>
+            Pattern de notificação
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.App.DomainNotificationHandler.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.App.DomainNotificationHandler.Handle(Calculo.Api.App.DomainNotification,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Calculo.Api.App.DomainNotificationHandler.GetNotifications">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Calculo.Api.App.DomainNotificationHandler.HasNotifications">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Calculo.Api.Api.Controllers.CalcularJurosController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.Api.Controllers.CalcularJurosController.#ctor(MediatR.IMediator,CalculoJuros.Juros.ITaxaJuros)">
+            <summary>
+            
+            </summary>
+            <param name="mediator"></param>
+            <param name="taxaQueries"></param>
+        </member>
+        <member name="M:Calculo.Api.Api.Controllers.CalcularJurosController.CalculaJuros(System.Decimal,System.Int32)">
+            <summary>
+            Cálculo em memória de juros compostos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Calculo.Api.Api.Controllers.CalcularJurosController.ShowMeTheCode">
+            <summary>
+            Show me the code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Calculo.Api.Api.Extensions.MvcFiltersConfigurations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.Api.Extensions.MvcFiltersConfigurations.ConfigureFilters(Microsoft.AspNetCore.Mvc.MvcOptions)">
+            <summary>
+            
+            </summary>
+            <param name="options"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Calculo.Api.Controllers.ResultMessageResponse`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="TResult"></typeparam>
+        </member>
+        <member name="P:Calculo.Api.Controllers.ResultMessageResponse`1.Errors">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Calculo.Api.Controllers.ResultMessageResponse`1.Data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Calculo.Api.Controllers.ResultMessageResponse`1.Success">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.Controllers.ResultMessageResponse`1.#ctor(`0,System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="data"></param>
+            <param name="errors"></param>
+        </member>
+        <member name="M:Calculo.Api.Controllers.ResultMessageResponse`1.op_Implicit(`0)~Calculo.Api.Controllers.ResultMessageResponse{`0}">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:Calculo.Api.Controllers.TaxaJurosController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.Controllers.TaxaJurosController.#ctor(CalculoJuros.Juros.ITaxaJuros)">
+            <summary>
+            
+            </summary>
+            <param name="taxa"></param>
+        </member>
+        <member name="M:Calculo.Api.Controllers.TaxaJurosController.ObterTaxaDeJuros">
+            <summary>
+            Obtem taxa de juros
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Calculo.Api.Extensions.ApplicationBuilderExtensionsSwagger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.Extensions.ApplicationBuilderExtensionsSwagger.UseSwaggerInApplication(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:Calculo.Api.Extensions.MvcJsonOptionsExtension">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.Extensions.MvcJsonOptionsExtension.ConfigureJsonOptions(Microsoft.Extensions.DependencyInjection.IMvcBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Calculo.Api.Extensions.ServiceCollectionExtensionsSwagger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.Extensions.ServiceCollectionExtensionsSwagger.ConfigureSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:Calculo.Api.Middlewares.DomainNotificationHandlerFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.Middlewares.DomainNotificationHandlerFilter.#ctor(MediatR.INotificationHandler{Calculo.Api.App.DomainNotification})">
+            <summary>
+            
+            </summary>
+            <param name="notifications"></param>
+        </member>
+        <member name="M:Calculo.Api.Middlewares.DomainNotificationHandlerFilter.OnResultExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ResultExecutingContext,Microsoft.AspNetCore.Mvc.Filters.ResultExecutionDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Calculo.Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Calculo.Api.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>        
+        </member>
+        <member name="M:Calculo.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
