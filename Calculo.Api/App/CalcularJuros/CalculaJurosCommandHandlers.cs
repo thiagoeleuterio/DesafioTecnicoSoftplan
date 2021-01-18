@@ -33,12 +33,18 @@ namespace Calculo.Api.App.CalcularJuros
         public async Task<decimal> Handle(CalculaJurosCommand message, CancellationToken cancellationToken)
         {
             if (message.QuantidadeMeses < 1 || message.QuantidadeMeses > 12)
+            {
                 await _mediator.Publish(DomainNotification.Factory.Create(message, $"Quantidade de meses:{message.QuantidadeMeses} incorreto."), cancellationToken);
+            }
 
-            if (_notificationHandler.HasNotifications) return 0;
+            if (_notificationHandler.HasNotifications)
+            {
+                return 0;
+            }
+
             var potencia = (decimal)Math.Pow(1 + ((double)message.TaxaJuros), message.QuantidadeMeses);
-            var valorCheio = Convert.ToDecimal(message.ValorInicial * potencia);
-            var valorCalculado = Math.Round(valorCheio, 2);
+            var valorTotal = Convert.ToDecimal(message.ValorInicial * potencia);
+            var valorCalculado = Math.Round(valorTotal, 2);
             return valorCalculado;
         }
     }

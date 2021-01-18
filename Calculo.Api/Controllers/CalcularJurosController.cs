@@ -57,7 +57,7 @@ namespace Calculo.Api.Api.Controllers
         /// <returns></returns>
         [HttpGet, Route("showmethecode")]
         [ProducesResponseType(typeof(ResultMessageResponse<string>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> ShowMeTheCode()
+        public IActionResult ShowMeTheCode()
         {
             return Ok(new ResultMessageResponse<string>("https://github.com/thiagoeleuterio/DesafioTecnicoSoftplan"));
         }

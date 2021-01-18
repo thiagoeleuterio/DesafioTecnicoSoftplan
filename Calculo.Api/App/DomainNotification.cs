@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MediatR;
+﻿using MediatR;
+using System;
 
 namespace Calculo.Api.App
 {
@@ -26,7 +23,7 @@ namespace Calculo.Api.App
         /// <summary>
         /// 
         /// </summary>
-        public  static class Factory
+        public static class Factory
         {
             /// <summary>
             /// 

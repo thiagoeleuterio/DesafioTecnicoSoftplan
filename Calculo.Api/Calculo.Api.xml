@@ -256,6 +256,18 @@
             <param name="next"></param>
             <returns></returns>
         </member>
+        <member name="T:Calculo.Api.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Calculo.Api.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
         <member name="T:Calculo.Api.Startup">
             <summary>
             
