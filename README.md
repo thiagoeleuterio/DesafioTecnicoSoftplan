@@ -1,4 +1,4 @@
-<h1 align="center">
+<h1 align="left">
     <a href="https://pt-br.reactjs.org/">🔗 Desafio técnico</a>
 </h1>
-<p align="center">🚀 API consiste em 2 endpoints</p>
+<p align="left">🚀 API para calculo de juros</p>
