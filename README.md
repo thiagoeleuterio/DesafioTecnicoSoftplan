@@ -5,8 +5,8 @@
 
 ### Consiste em 2 endpoints: 
 
-- [X] Retorna taxa de juros
-- [X] Faz calculo dos juros 
+- [X] Retorna o juros de 1% ou 0,01 (fixo no código)
+- [X] Faz um cálculo em memória, de juros compostos
 
 ### 🛠 Tecnologias
 
