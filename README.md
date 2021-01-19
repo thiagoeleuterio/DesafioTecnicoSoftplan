@@ -1,7 +1,12 @@
 <h1 align="left">
     Desafio técnico
 </h1>
-<p align="left">API para cálculo de juros.</br> Consiste em 2 endpoints, um retorna o valor da taxa de juros e outro que realiza o cálculo.</p>
+<p align="left">API para cálculo de juros.</p>
+
+### Consiste em 2 endpoints: 
+
+- [X] Retorna taxa de juros
+- [X] Faz calculo dos juros 
 
 ### 🛠 Tecnologias
 
