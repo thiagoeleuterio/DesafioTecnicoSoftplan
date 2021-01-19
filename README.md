@@ -3,10 +3,11 @@
 </h1>
 <p align="left">API para cálculo de juros.</p>
 
-### Consiste em 2 endpoints: 
+### Consiste em 3 endpoints: 
 
 - [X] Retorna o juros de 1% ou 0,01 (fixo no código)
 - [X] Faz um cálculo em memória, de juros compostos
+- [X] Retornar a url de onde encontra-se o fonte no github
 
 ### 🛠 Tecnologias
 
